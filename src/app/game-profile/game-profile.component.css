@@ -1,0 +1,94 @@
+.bodyaa{
+    background: url("http://yesofcorsa.com/wp-content/uploads/2015/07/4542_counter_strike_global_offensive.jpg");
+   
+
+}
+.box1 {
+  
+    background: #314057;
+   
+}
+.effect1{
+    -webkit-box-shadow: 0 10px 6px -6px #262a35;
+       -moz-box-shadow: 0 10px 6px -6px #262a35;
+            box-shadow: 0 10px 6px -6px #262a35;
+}
+.box2 {
+    
+    background:rgba(0, 0, 0, 0.6)
+    
+   
+}
+.effect2{
+
+     box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+.box3 {
+  
+    background: #14151a;
+    width:317px;
+    height:100px;
+    box-sizing: border-box;
+    margin:10px 0px 0px -5px;
+    border-radius: 7px;
+   
+}
+.box4 {
+  
+    background: #14151a;
+    width:317px;
+    height:33px;
+    box-sizing: border-box;
+    margin:10px 0px 0px -5px;
+    border-radius: 7px;
+   
+}
+.box5 {
+  
+    background: #14151a;
+    width:317px;
+    height:100px;
+    box-sizing: border-box;
+    margin:10px 0px 0px -5px;
+    border-radius: 7px;
+   
+}
+.box6 {
+  
+    background: #14151a;
+    width:317px;
+    height:100px;
+    box-sizing: border-box;
+    margin:10px 0px 0px -5px;
+    border-radius: 7px;
+   
+}
+.box7 {
+  
+    background: #14151a;
+    width:320px;
+    height:50px;
+    box-sizing: border-box;
+    margin:10px 0px 0px -5px;
+    border-radius: 7px;
+   
+}
+.image{
+    
+        border: 1px solid grey;
+        border-radius: 4px;
+        padding: 5px;
+        width: 150px;
+   
+}
+.button{
+     background-color: #314057;
+     margin:5px 0px 0px 0px;
+     color: white;
+     border-color: #314057;
+     
+}
+li{
+    margin: 10px 0;
+  }
+  

@@ -13,6 +13,7 @@ import { ProfileComponent } from './profile/profile.component';
 import { GameProfileComponent } from './game-profile/game-profile.component';
 import { SignupComponent } from './signup/signup.component';
 import { EdituserComponent } from './edituser/edituser.component';
+import { SearchuserComponent } from './searchuser/searchuser.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { EdituserComponent } from './edituser/edituser.component';
     ProfileComponent,
     GameProfileComponent,
     SignupComponent,
-    EdituserComponent
+    EdituserComponent,
+    SearchuserComponent
   ],
   imports: [
     BrowserModule,

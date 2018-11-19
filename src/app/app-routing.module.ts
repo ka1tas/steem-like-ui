@@ -8,6 +8,7 @@ import { CommunityComponent } from './community/community.component';
 import { GameProfileComponent } from './game-profile/game-profile.component';
 import { SignupComponent } from './signup/signup.component';
 import { EdituserComponent } from './edituser/edituser.component';
+import { SearchuserComponent } from './searchuser/searchuser.component';
 
 const routes: Routes = [
   {path:"", component:StoreComponent},
@@ -17,7 +18,8 @@ const routes: Routes = [
   {path:"profile", component:ProfileComponent},
   {path:"games", component:GamesComponent},
   {path:"signup", component:SignupComponent},
-  {path:"editprofile", component:EdituserComponent }
+  {path:"editprofile", component:EdituserComponent },
+  {path:"finduser", component:SearchuserComponent}
 
 ];
 

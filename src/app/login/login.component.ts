@@ -2,8 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { UsernameValidators } from '../login/username.validators';
 import { Router } from '@angular/router';
-
-
+import { User } from '../user';
+import { LoginService } from '../login.service';
+import {AuthService} from './../auth.service';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-login',
@@ -29,13 +31,33 @@ json:any;
       Validators.maxLength(15)]),
   });
 
-  constructor(private router: Router) { }
+
+
+  constructor(private http: HttpClient, private router: Router, private loginService: LoginService,
+    public service: AuthService) { }
 
   ngOnInit() {
-  }
-  add(){
-    
 
+  }
+
+user1:User={
+  id:1,
+  username:"kaitas",
+  password:12345
+}
+
+  add(userName, passWord){
+    
+    if(userName==this.user1.username||passWord==this.user1.password){
+
+      console.log("checked true");
+            this.service.login();
+              
+            this.router.navigate(['/store']);
+            console.log("after login");
+
+
+    }
 
     /* console.log( this.form.value);
     this.json = this.form.value;

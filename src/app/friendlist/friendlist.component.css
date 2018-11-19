@@ -1,0 +1,15 @@
+.friendlist{
+    margin-top: 20px;
+    background-color: darkslateblue;
+    color:white;
+    opacity: 0.9;
+    
+}
+.friendlist li{
+    padding: 5px;
+}
+
+.friendlist h2{
+   
+    color:gold;
+}

@@ -9,6 +9,8 @@ import { GameProfileComponent } from './game-profile/game-profile.component';
 import { SignupComponent } from './signup/signup.component';
 import { EdituserComponent } from './edituser/edituser.component';
 import { SearchuserComponent } from './searchuser/searchuser.component';
+import { FriendlistComponent } from './friendlist/friendlist.component';
+import { GamelistComponent } from './gamelist/gamelist.component';
 
 const routes: Routes = [
   {path:"", component:StoreComponent},
@@ -19,7 +21,9 @@ const routes: Routes = [
   {path:"games", component:GamesComponent},
   {path:"signup", component:SignupComponent},
   {path:"editprofile", component:EdituserComponent },
-  {path:"finduser", component:SearchuserComponent}
+  {path:"finduser", component:SearchuserComponent},
+  {path:"friendlist", component:FriendlistComponent},
+  {path:"gamelist", component:GamelistComponent}
 
 ];
 

@@ -7,7 +7,7 @@
                                 <li>
                                   <form class="navbar-form" role="search">
                                     <div class="input-group">
-                                      <input type="text" class="form-control" placeholder="Search Games" name="q">
+                                      <input type="text" class="form-control" [(ngModel)]="queryString" placeholder="Search Games"  name="q">
                                       <div class="input-group-btn">
                                         <button class="btn btn-info" type="submit"><i class="fa fa-search"></i></button>
                                       </div>
@@ -16,8 +16,14 @@
                                 </li>
                               </ul>
                               <br> <br>
+
+
+                              
+                              
                 </div>
-                <div class="col-lg-3"></div>
+                <div class="col-lg-3">
+                    
+                </div>
 
         </div>
 
@@ -49,12 +55,14 @@
                                       <button class="btn btn-outline-success bg-success" type="submit"><i class="fa fa-search"></i></button>
                                     </div>
                                   </form>
+                                  <br>
                               </div>
     
                         </div>
                     </div>
             </div>
         </div>
+  
         <div class="col-lg-10">
             <section id="t-cards">
                 <div class="container">
@@ -63,7 +71,7 @@
                             <div class="panel panel-default panel-card panel-bg">
                                 <div class="panel-heading">
                                     <img src="https://i.kinja-img.com/gawker-media/image/upload/s--9KiOXznr--/c_scale,f_auto,fl_progressive,q_80,w_800/hdn0qsabgs28tbu00tuf.jpg" />
-                                    <button class="btn btn-primary btn-sm" role="button">Add</button>
+                                    <button class="btn btn-primary btn-sm" role="button"><i class="fas fa-cart-plus"></i></button>
                                 </div>
 
                                 <div class="panel-body text-center">
@@ -89,7 +97,7 @@
                             <div class="panel panel-default panel-card">
                                 <div class="panel-heading">
                                     <img src="https://pmcvariety.files.wordpress.com/2018/04/pubg.jpg?w=1000&h=563&crop=1" />
-                                    <button class="btn btn-primary btn-sm" role="button">Add</button>
+                                    <button class="btn btn-primary btn-sm" role="button"><i class="fas fa-cart-plus"></i></button>
                                 </div>
 
                                 <div class="panel-body text-center">
@@ -114,7 +122,7 @@
                             <div class="panel panel-default panel-card">
                                 <div class="panel-heading">
                                     <img src="http://www.mweb.co.za/DesktopModules/DigArticle/MediaHandler.ashx?portalid=20&moduleid=5259&mediaid=54145&width=920" />
-                                    <button class="btn btn-primary btn-sm" role="button">Add</button>
+                                    <button class="btn btn-primary btn-sm" role="button"><i class="fas fa-cart-plus"></i></button>
                                 </div>
 
                                 <div class="panel-body text-center">
@@ -138,7 +146,7 @@
                             <div class="panel panel-default panel-card">
                                 <div class="panel-heading">
                                     <img src="https://cdn-images-1.medium.com/max/1191/0*vbw4wQW_Xq2_3eOo.jpg" />
-                                    <button class="btn btn-primary btn-sm" role="button">Add</button>
+                                    <button class="btn btn-primary btn-sm" role="button"><i class="fas fa-cart-plus"></i></button>
                                 </div>
 
                                 <div class="panel-body text-center">
@@ -165,7 +173,7 @@
                             <div class="panel panel-default panel-card panel-bg">
                                 <div class="panel-heading">
                                     <img src="https://i.kinja-img.com/gawker-media/image/upload/s--9KiOXznr--/c_scale,f_auto,fl_progressive,q_80,w_800/hdn0qsabgs28tbu00tuf.jpg" />
-                                    <button class="btn btn-primary btn-sm" role="button">Add</button>
+                                    <button class="btn btn-primary btn-sm" role="button"><i class="fas fa-cart-plus"></i></button>
                                 </div>
 
                                 <div class="panel-body text-center">
@@ -191,7 +199,7 @@
                             <div class="panel panel-default panel-card">
                                 <div class="panel-heading">
                                     <img src="https://pmcvariety.files.wordpress.com/2018/04/pubg.jpg?w=1000&h=563&crop=1" />
-                                    <button class="btn btn-primary btn-sm" role="button">Add</button>
+                                    <button class="btn btn-primary btn-sm" role="button"><i class="fas fa-cart-plus"></i></button>
                                 </div>
 
                                 <div class="panel-body text-center">
@@ -216,7 +224,7 @@
                             <div class="panel panel-default panel-card">
                                 <div class="panel-heading">
                                     <img src="http://www.mweb.co.za/DesktopModules/DigArticle/MediaHandler.ashx?portalid=20&moduleid=5259&mediaid=54145&width=920" />
-                                    <button class="btn btn-primary btn-sm" role="button">Add</button>
+                                    <button class="btn btn-primary btn-sm" role="button"><i class="fas fa-cart-plus"></i></button>
                                 </div>
 
                                 <div class="panel-body text-center">
@@ -240,7 +248,7 @@
                             <div class="panel panel-default panel-card">
                                 <div class="panel-heading">
                                     <img src="https://cdn-images-1.medium.com/max/1191/0*vbw4wQW_Xq2_3eOo.jpg" />
-                                    <button class="btn btn-primary btn-sm" role="button">Add</button>
+                                    <button class="btn btn-primary btn-sm" role="button"><i class="fas fa-cart-plus"></i></button>
                                 </div>
 
                                 <div class="panel-body text-center">

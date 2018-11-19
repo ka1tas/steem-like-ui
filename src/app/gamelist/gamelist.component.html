@@ -1,0 +1,37 @@
+
+
+  <br>
+  <br>
+<div class="row justify-content-center">
+
+    <div class="col-12 col-md-10 col-lg-6">
+       
+            <div class="card-body row no-gutters align-items-center">
+                <div class="col-auto">
+                    <i  class="fas fa-search h4 text-body"></i>
+                </div>
+                <!--end of col-->
+                <div class="col">
+                        <input type="text" [(ngModel)]="queryString" class="form-control form-control-lg form-control-borderless" placeholder="Search Game" >
+                  
+                </div>
+                <!--end of col-->
+              
+                <!--end of col-->
+            </div>
+         
+    </div>
+    <!--end of col-->
+</div>
+<br><br>
+<div class="container">
+<div class="row">
+<div *ngFor="let game of games| filterdata: queryString : 'name' ; let i = index ">
+    <div class="carda" >
+      <div class="box">
+          <h2>{{game.name}}</h2> 
+      </div>
+    </div>
+  </div>
+</div>
+</div>

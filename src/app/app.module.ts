@@ -14,6 +14,13 @@ import { GameProfileComponent } from './game-profile/game-profile.component';
 import { SignupComponent } from './signup/signup.component';
 import { EdituserComponent } from './edituser/edituser.component';
 import { SearchuserComponent } from './searchuser/searchuser.component';
+import { GamelistComponent } from './gamelist/gamelist.component';
+import { FriendlistComponent } from './friendlist/friendlist.component';
+import { AuthService } from './auth.service';
+import { AuthGuard } from './auth.guard';
+import { HttpClientModule } from '@angular/common/http';
+import { FilterdataPipe } from './filterdata.pipe';
+
 
 @NgModule({
   declarations: [
@@ -27,15 +34,19 @@ import { SearchuserComponent } from './searchuser/searchuser.component';
     GameProfileComponent,
     SignupComponent,
     EdituserComponent,
-    SearchuserComponent
+    SearchuserComponent,
+    GamelistComponent,
+    FriendlistComponent,
+    FilterdataPipe
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers:[AuthService, AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

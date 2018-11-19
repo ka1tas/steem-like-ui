@@ -1,3 +1,87 @@
-<p>
-  edituser works!
-</p>
+<div class="container editcontainer">
+    <br>
+    <br>
+      <div class="row" id="main">
+            <div class="col-md-4 well" id="leftPanel">
+                <div class="row">
+                     <div class="col-sm-12">
+                       <div>
+                    <img src="data:image/png;base64,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" alt="Texto Alternativo" class="img-circle img-thumbnail">
+                                    
+                  </div> 
+                </div> 
+                </div>
+            </div>
+            <div class="col-md-8 well" id="rightPanel">
+                <div class="row">
+        <div class="col-md-12">
+          <form role="form">
+          <h1 style="color:black">Edit Profile.</h1>
+          <hr class="colorgraph">
+          <div class="row">
+            <div class="col-xs-12 col-sm-6 col-md-6">
+              <div class="form-group">
+                 <input type="text" name="first_name" id="first_name" class="form-control input-lg" placeholder="First Name" tabindex="1">
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-6">
+              <div class="form-group">
+                <input type="text" name="last_name" id="last_name" class="form-control input-lg" placeholder="Last Name" tabindex="2">
+              </div>
+            </div>
+          </div>
+          <div class="row">
+          <div class="col-xs-12 col-sm-6 col-md-6">
+              <div class="form-group" style="margin:-2px 0px 0px -15px;">
+                  <label class="radio-inline" style="font-weight:initial;color:white;font-size:20px;margin:1px 0px 0px 24px;"><input type="radio" name="optradio" >Male</label>
+                  <label class="radio-inline" style="font-weight:initial;color:white;font-size:20px;margin:1px 0px 0px 24px;"><input type="radio" name="optradio" >Female</label>
+               </div>
+          </div>
+          <div class="col-xs-12 col-sm-6 col-md-6">
+              <div class="form-group">
+              <input type="text" name="dateOfBirth" id="dateOfBirth" class="form-control input-lg" placeholder="Date Of Birth" tabindex="5">
+              </div>
+          </div> 
+          </div>
+          <div class="row">
+            <div class="col-xs-12 col-sm-6 col-md-6">
+              <div class="form-group">
+                <input type="text" name="mobileNumber" id="mobileNumber" class="form-control input-lg" placeholder="Mobile Number" tabindex="5">
+              </div>
+          </div>
+          <div class="col-xs-12 col-sm-6 col-md-6">
+              <div class="form-group">
+                <input type="text" name="country" id="country" class="form-control input-lg" placeholder="Country" tabindex="5">
+
+              </div>
+          </div>
+          </div>
+          <div class="form-group">
+              <input type="email" name="email" id="email" class="form-control input-lg" placeholder="Email Address" tabindex="4">
+          </div>
+          <hr class="colorgraph">
+          <div class="row">
+            <div class="col-xs-12 col-md-6"></div>
+            <div class="col-xs-12 col-md-6"><a href="#" class="btn btn-success btn-block btn-md">Save</a></div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="t_and_c_m" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <h4 class="modal-title" id="myModalLabel">Terms & Conditions</h4>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-dismiss="modal">I Agree</button>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+    </div>
+            </div>
+         </div>       
+   

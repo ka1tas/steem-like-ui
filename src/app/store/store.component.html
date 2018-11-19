@@ -15,10 +15,7 @@
                                   </form>
                                 </li>
                               </ul>
-                              <br> <br>
-
-
-                              
+                              <br> <br>                             
                               
                 </div>
                 <div class="col-lg-3">
@@ -62,28 +59,28 @@
                     </div>
             </div>
         </div>
-  
-        <div class="col-lg-10">
+                               
+                                    
+        <div class="col-lg-10"  >
             <section id="t-cards">
                 <div class="container">
-                    <div class="row" style="padding:0px 0px 15px 0px;">
-                        <div class="col-sm-6 col-md-3">
+                    <div class="row" style="padding:0px 0px 15px 0px;" >
+                        <div class="col-sm-6 col-md-3" *ngFor="let game of listOfGames| filterdata: queryString : 'name' ; let i = index"  >
                             <div class="panel panel-default panel-card panel-bg">
                                 <div class="panel-heading">
-                                    <img src="https://www.zing.cz/wp-content/uploads/2018/07/984.jpg" />
+                                    <img src="https://i.kinja-img.com/gawker-media/image/upload/s--9KiOXznr--/c_scale,f_auto,fl_progressive,q_80,w_800/hdn0qsabgs28tbu00tuf.jpg" />
                                     <button class="btn btn-primary btn-sm" role="button"><i class="fas fa-cart-plus"></i></button>
                                 </div>
 
-                                <div class="panel-body text-center">
-                                    <h4 class="panel-header"><a routerLink="/games">Team Fortress 2</a></h4>
-                                    <small>Best Game Ever.</small>
+                                <div class="panel-body text-center" >
+                                    <h4 class="panel-header"><a routerLink="/games">{{game.name}}</a></h4>
+                                    <small>{{game.headLine}}</small>
                                 </div>
                                 <div class="panel-thumbnails">
                                     <div class="row">
 
                                         <div class="col-xs-4">
-                                            Team-based Multiplayer Game.
-                                            by Valve Corporation
+                                            {{game.description}}
                                         </div>
                                         <div class="col-xs-4">
                                             <span class="badge badge-warning">&#x20B9; 0.00</span>
@@ -93,182 +90,8 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-sm-6 col-md-3">
-                            <div class="panel panel-default panel-card">
-                                <div class="panel-heading">
-                                    <img src="https://s.blanja.com/picspace/41/142377/900.738_002d5217d2674fba946dc87731b6d903.jpg" />
-                                    <button class="btn btn-primary btn-sm" role="button"><i class="fas fa-cart-plus"></i></button>
-                                </div>
-
-                                <div class="panel-body text-center">
-                                    <h4 class="panel-header"><a routerLink="/games">PUBG</a></h4>
-                                    <small>online multiplayer battle royale game </small>
-                                </div>
-                                <div class="panel-thumbnails">
-                                    <div class="row">
-                                        <div class="col-xs-4">
-                                            PlayerUnknown's Battlegrounds (PUBG)
-                                            by PUBG Corporation
-                                        </div>
-
-                                        <div class="col-xs-4">
-                                            <span class="badge badge-warning">&#x20B9; 0.00</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-6 col-md-3">
-                            <div class="panel panel-default panel-card">
-                                <div class="panel-heading">
-                                    <img src="http://www.mweb.co.za/DesktopModules/DigArticle/MediaHandler.ashx?portalid=20&moduleid=5259&mediaid=54145&width=920" />
-                                    <button class="btn btn-primary btn-sm" role="button"><i class="fas fa-cart-plus"></i></button>
-                                </div>
-
-                                <div class="panel-body text-center">
-                                    <h4 class="panel-header"><a routerLink="/games">Counter Strike: Go</a></h4>
-                                    <small>team-based action gameplay.</small>
-                                </div>
-                                <div class="panel-thumbnails">
-                                    <div class="row">
-                                        <div class="col-xs-4">
-                                            Team of counter terrorist fights against terrorists.
-                                        </div>
-                                        <div class="col-xs-4">
-                                            <span class="badge badge-warning">&#x20B9; 0.00</span>
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-6 col-md-3">
-                            <div class="panel panel-default panel-card">
-                                <div class="panel-heading">
-                                    <img src="https://cdn-images-1.medium.com/max/1191/0*vbw4wQW_Xq2_3eOo.jpg" />
-                                    <button class="btn btn-primary btn-sm" role="button"><i class="fas fa-cart-plus"></i></button>
-                                </div>
-
-                                <div class="panel-body text-center">
-                                    <h4 class="panel-header"><a routerLink="/games">Dota 2</a></h4>
-                                    <small>multiplayer online battle arena</small>
-                                </div>
-                                <div class="panel-thumbnails">
-                                    <div class="row">
-                                        <div class="col-xs-4">
-                                            Two teams compete to destroy a large structure "Ancient".
-                                        </div>
-                                        <div class="col-xs-4">
-                                            <span class="badge badge-warning">&#x20B9; 0.00</span>
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                    <div class="row">
-                        <div class="col-sm-6 col-md-3">
-                            <div class="panel panel-default panel-card panel-bg">
-                                <div class="panel-heading">
-                                    <img src="https://www.zing.cz/wp-content/uploads/2018/07/984.jpg" />
-                                    <button class="btn btn-primary btn-sm" role="button"><i class="fas fa-cart-plus"></i></button>
-                                </div>
-
-                                <div class="panel-body text-center">
-                                    <h4 class="panel-header"><a routerLink="/games">Team Fortress 2</a></h4>
-                                    <small>Best Game Ever.</small>
-                                </div>
-                                <div class="panel-thumbnails">
-                                    <div class="row">
-
-                                        <div class="col-xs-4">
-                                            Team-based Multiplayer Game.
-                                            by Valve Corporation
-                                        </div>
-                                        <div class="col-xs-4">
-                                            <span class="badge badge-warning">&#x20B9; 0.00</span>
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-6 col-md-3">
-                            <div class="panel panel-default panel-card">
-                                <div class="panel-heading">
-                                    <img src="https://s.blanja.com/picspace/41/142377/900.738_002d5217d2674fba946dc87731b6d903.jpg" />
-                                    <button class="btn btn-primary btn-sm" role="button"><i class="fas fa-cart-plus"></i></button>
-                                </div>
-
-                                <div class="panel-body text-center">
-                                    <h4 class="panel-header"><a routerLink="/games">PUBG</a></h4>
-                                    <small>online multiplayer battle royale game </small>
-                                </div>
-                                <div class="panel-thumbnails">
-                                    <div class="row">
-                                        <div class="col-xs-4">
-                                            PlayerUnknown's Battlegrounds (PUBG)
-                                            by PUBG Corporation
-                                        </div>
-
-                                        <div class="col-xs-4">
-                                            <span class="badge badge-warning">&#x20B9; 0.00</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-6 col-md-3">
-                            <div class="panel panel-default panel-card">
-                                <div class="panel-heading">
-                                    <img src="http://www.mweb.co.za/DesktopModules/DigArticle/MediaHandler.ashx?portalid=20&moduleid=5259&mediaid=54145&width=920" />
-                                    <button class="btn btn-primary btn-sm" role="button"><i class="fas fa-cart-plus"></i></button>
-                                </div>
-
-                                <div class="panel-body text-center">
-                                    <h4 class="panel-header"><a routerLink="/games">Counter Strike: Go</a></h4>
-                                    <small>team-based action gameplay.</small>
-                                </div>
-                                <div class="panel-thumbnails">
-                                    <div class="row">
-                                        <div class="col-xs-4">
-                                            Team of counter terrorist fights against terrorists.
-                                        </div>
-                                        <div class="col-xs-4">
-                                            <span class="badge badge-warning">&#x20B9; 0.00</span>
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-6 col-md-3">
-                            <div class="panel panel-default panel-card">
-                                <div class="panel-heading">
-                                    <img src="https://cdn-images-1.medium.com/max/1191/0*vbw4wQW_Xq2_3eOo.jpg" />
-                                    <button class="btn btn-primary btn-sm" role="button"><i class="fas fa-cart-plus"></i></button>
-                                </div>
-
-                                <div class="panel-body text-center">
-                                    <h4 class="panel-header"><a routerLink="/games">Dota 2</a></h4>
-                                    <small>multiplayer online battle arena </small>
-                                </div>
-                                <div class="panel-thumbnails">
-                                    <div class="row">
-                                        <div class="col-xs-4">
-                                            Two teams compete to destroy a large structure "Ancient".
-                                        </div>
-                                        <div class="col-xs-4">
-                                            <span class="badge badge-warning">&#x20B9; 0.00</span>
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
+                        
+                               
                     </div>
                 </div>
             </section>

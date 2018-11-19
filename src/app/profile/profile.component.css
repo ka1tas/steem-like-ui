@@ -1,0 +1,51 @@
+.thetop{
+    background-color: #1b2838;
+    color: aliceblue;
+}
+.thetop h3{
+    padding: 20px;
+    padding-bottom:0px; 
+    color: white;
+}
+
+.thetop p{
+   
+    color: grey;
+}
+
+.profilepic{
+    margin:20px;
+}
+
+.ownedgames{
+
+    background-color: rgb(69, 69, 80);
+    color: white;
+
+}
+
+.ownedgames img{
+
+
+padding: 9px;
+}
+
+.ndrow{
+    margin-top: 6px;
+}
+.favgame{
+    border: 5px darkgrey solid;
+    padding: 0px;
+    height: 90%;
+}
+
+.otherdetails{
+    background-color: #1b2838;
+    color:wheat;
+}
+
+
+.otherdetails ul{
+ list-style: none;
+ 
+}

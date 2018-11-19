@@ -11,6 +11,8 @@ import { GamesComponent } from './games/games.component';
 import { CommunityComponent } from './community/community.component';
 import { ProfileComponent } from './profile/profile.component';
 import { GameProfileComponent } from './game-profile/game-profile.component';
+import { SignupComponent } from './signup/signup.component';
+import { EdituserComponent } from './edituser/edituser.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { GameProfileComponent } from './game-profile/game-profile.component';
     GamesComponent,
     CommunityComponent,
     ProfileComponent,
-    GameProfileComponent
+    GameProfileComponent,
+    SignupComponent,
+    EdituserComponent
   ],
   imports: [
     BrowserModule,

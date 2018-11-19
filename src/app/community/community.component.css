@@ -22,10 +22,12 @@
     margin:0px auto;
     }
     .ui-block {
-    background-color: #fff;
+    background-color: black;
     border-radius: 5px;
     border: 1px solid #e6ecf5;
     margin-bottom: 15px;
+    color: white;
+    opacity: 0.9;
     }
     .post {
     position: relative;
@@ -34,11 +36,14 @@
     }
     .card{
     border:none !important;
+    background-color: black;
+    
     }
     .card-body {
     -ms-flex: 1 1 auto;
     flex: 1 1 auto;
     padding: 0 !important;
+    
     }
     .post__author {
     margin-bottom: 20px;
@@ -157,4 +162,13 @@
     vertical-align: middle;
     float: left;
     }
+    }
+
+    .commentform{
+
+        width: 100%;
+    }
+    .commentkoro{
+
+        height: 60px;
     }

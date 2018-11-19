@@ -6,14 +6,19 @@ import { ProfileComponent } from './profile/profile.component';
 import { StoreComponent } from './store/store.component';
 import { CommunityComponent } from './community/community.component';
 import { GameProfileComponent } from './game-profile/game-profile.component';
+import { SignupComponent } from './signup/signup.component';
+import { EdituserComponent } from './edituser/edituser.component';
 
 const routes: Routes = [
-  {path:"", component:LoginComponent},
+  {path:"", component:StoreComponent},
   {path:"login", component:LoginComponent},
   {path:"community", component:CommunityComponent},
   {path:"store", component:StoreComponent},
-  {path:"profile", component:GameProfileComponent},
-  {path:"games", component:GamesComponent}
+  {path:"profile", component:ProfileComponent},
+  {path:"games", component:GamesComponent},
+  {path:"signup", component:SignupComponent},
+  {path:"editprofile", component:EdituserComponent }
+
 ];
 
 @NgModule({

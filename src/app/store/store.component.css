@@ -1,7 +1,7 @@
 
 
 #t-cards {
-    padding-top: 80px;
+ 
     padding-bottom: 80px;
      color:white;
 }
@@ -105,3 +105,61 @@
 
     font-size: 11px;
 }
+
+.browse-game{
+
+    background-color: rgb(38, 68, 99);
+}
+
+.browse-game .browse-heading{
+
+    color:white;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+
+
+
+
+
+/* Search BAr for User*/
+
+#searchForm{
+    display: absolute;
+    width: 100%;
+
+}
+
+#searchForm .form-row .col {
+  margin: 0;
+  padding: 0;
+}
+#searchForm .form-row button, #searchForm .form-row input {
+  border: 1px solid #DBDBDB;
+  border-radius: 0;
+  margin: 0;
+}
+#searchForm .form-row input {
+  border-right: 0px;
+  width: 160px;
+}
+#searchForm .form-row button {
+  width: 40px;
+}
+#searchForm .form-row button i{
+ color: #FFFFFF;
+}
+#searchForm .form-row button:hover{
+    background: rgba(0, 255, 200, 0.87) !important;
+}
+
+.form-control:focus,
+.btn:focus {
+    border-color: none !important;
+    box-shadow: none !important;
+}
+
+/*game search*/
+

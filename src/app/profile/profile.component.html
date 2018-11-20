@@ -130,7 +130,7 @@
     </div>
           
             <br>
-          <ul *ngFor="let user of friends| filterdata: queryString : 'username' ; let i = index ">
+          <ul class="userfriend" *ngFor="let user of friends| filterdata: queryString : 'username' ; let i = index ">
             <li>
                <a routerLink="/profile" class="btn btn-dark">
             {{user.username}} 

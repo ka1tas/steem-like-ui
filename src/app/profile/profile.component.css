@@ -60,8 +60,16 @@ padding: 9px;
     opacity: 0.7;
     
 }
+
+.userfriend{
+    list-style: none;
+    display: inline-block;
+    
+}
+
 .friendlist li{
     padding: 5px;
+    display: inline-block;
 }
 
 .friendlist h2{

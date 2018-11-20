@@ -25,6 +25,7 @@ function search(arr, query) {
   var results = [];
   query = query.toLowerCase();
 
+  
   angular.forEach(arr, function(item) {
     if (item.toLowerCase().indexOf(query) !== -1) {
       results.push(item);

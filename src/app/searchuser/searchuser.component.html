@@ -23,9 +23,13 @@
                     </div>
                     <!--end of col-->
                 </div>
-                <div id="search-results" ng-show="focus" *ngFor="let user of listofuser| filterdata: query : 'username' ; let i = index ">
-                    <div class="search-result" ng-click="setQuery(item)">{{user.username}}</div>
-                </div>
+                <div class="search">
+                <ul id="search-results" ng-show="focus" *ngFor="let user of listofuser| filterdata: query : 'username' ; let i = index ">
+                    
+                    <li class="search-result searchlist" ng-click="setQuery(item)"><h4><a routerLink="/profile">{{user.username}}</a>&nbsp;&nbsp;&nbsp;
+                        <i class="far fa-plus-square btn btn-success"></i></h4></li>
+                    
+                </ul></div>
            <!--  </form> -->
         </div>
         <!--end of col-->

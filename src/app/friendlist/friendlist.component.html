@@ -1,37 +1,51 @@
 <div class="container">
   <div class="row">
+
+
+    
    
     <div class="col-lg-2"></div>
     <br>
     <div class="col-lg-8 friendlist">
       <h2>Friend List</h2>
+
+      
+
+  <br>
+  <br>
+<div class="row justify-content-center">
+
+    <div class="col-12 col-md-10 col-lg-6">
+       
+            <div class="card-body row no-gutters align-items-center">
+                <div class="col-auto">
+                    <i  class="fas fa-search h4 text-body"></i>
+                </div>
+                <!--end of col-->
+                <div class="col">
+                        <input type="text" [(ngModel)]="queryString" class="form-control form-control-lg form-control-borderless" placeholder="Search Friends" >
+                  
+                </div>
+                <!--end of col-->
+              
+                <!--end of col-->
+            </div>
+         
+    </div>
+    <!--end of col-->
+</div>
       
         <br>
-      <ul>
+      <ul *ngFor="let user of friends| filterdata: queryString : 'username' ; let i = index ">
         <li>
-      <a routerLink="/profile" class="btn btn-dark">
-        Awptimus Giri
+           <a routerLink="/profile" class="btn btn-dark">
+        {{user.username}} 
       </a>
       <span class="btn btn-danger"><i class="fas fa-user-times"></i>Unfriend</span>
     
     </li>
-      <li><a routerLink="/profile" class="btn btn-dark">
-        Kaitas
-      </a>
-      <span class="btn btn-danger"><i class="fas fa-user-times"></i>Unfriend</span></li>
-      <li><a routerLink="/profile" class="btn btn-dark">
-        Beast_Whisperer
-      </a>
-      <span class="btn btn-danger"><i class="fas fa-user-times"></i>Unfriend</span></li>
-    <li><a routerLink="/profile" class="btn btn-dark">
-        Anirban_7
-    </a>
-    <span class="btn btn-danger"><i class="fas fa-user-times"></i>Unfriend</span></li>
-    <li><a routerLink="/profile" class="btn btn-dark">
-        Sayantan
-    </a>
-    <span class="btn btn-danger"><i class="fas fa-user-times"></i>Unfriend</span></li>
-    </ul>
+      </ul>
+      
     </div>
     <div class="col-lg-8"></div>
 

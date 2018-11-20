@@ -15,7 +15,7 @@ const httpOptions = {
   providedIn: 'root'
 })
 export class LoginService {
-  url: string = "/payrollm1/app/rest/authenticate";
+  url: string = "/";
 
   constructor( private http: HttpClient) { }
   

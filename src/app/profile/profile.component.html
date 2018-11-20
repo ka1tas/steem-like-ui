@@ -23,9 +23,9 @@
               </p>
             </div>
             <div class="col-lg-3">
-              <h3>Level: 17</h3>
+              <h3>Steem Points: 17</h3>
               <br><br><br><br><br>
-              <a routerLink="/editprofile" class="btn btn-info">Edit Profile</a>
+          <!--     <a routerLink="/editprofile" class="btn btn-info">Edit Profile</a> -->
             </div>
           </div>
         </div>
@@ -86,4 +86,72 @@
     </div>
 
   </div>
+
+
+
+
+
+ 
+      <div class="row">
+        
+       
+        <div class="col-lg-2"></div>
+    
+        
+        <br>
+        <div class="col-lg-8 friendlist">
+            <div class="container">
+          <h2>Friend List</h2>
+    
+          
+    
+      <br>
+      <br>
+    <div class="row justify-content-center">
+    
+        <div class="col-12 col-md-10 col-lg-6">
+           
+                <div class="card-body row no-gutters align-items-center">
+                    <div class="col-auto">
+                        <i  class="fas fa-search h4 text-body"></i>
+                    </div>
+                    <!--end of col-->
+                    <div class="col">
+                            <input type="text" [(ngModel)]="queryString" class="form-control form-control-lg form-control-borderless" placeholder="Search Friends" >
+                      
+                    </div>
+                    <!--end of col-->
+                  
+                    <!--end of col-->
+                </div>
+             
+        </div>
+        <!--end of col-->
+    </div>
+          
+            <br>
+          <ul *ngFor="let user of friends| filterdata: queryString : 'username' ; let i = index ">
+            <li>
+               <a routerLink="/profile" class="btn btn-dark">
+            {{user.username}} 
+          </a>
+          <span class="btn btn-danger"><i class="fas fa-user-times"></i>Unfriend</span>
+        
+        </li>
+          </ul>
+          
+        </div>
+      </div>
+        <div class="col-lg-2"></div>
+    
+      
+    
+    </div>
+
+
+
+
+
+
+
 </div>

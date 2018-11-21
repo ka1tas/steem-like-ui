@@ -198,7 +198,7 @@
 
 			</div>
 			<div class="card-body">
-				<form [formGroup]="form">
+				<form [formGroup]="form" >
 					<div class="input-group form-group">
 						<div class="input-group-prepend">
 							<span class="input-group-text"><i class="fas fa-user"></i></span>
@@ -235,7 +235,7 @@
 						<input type="checkbox">Remember Me
 					</div>
 					<div class="form-group">
-						<input type="submit" value="Login" [disabled]="form.invalid" (click)="add(userName.value, passWord.value); "
+						<input type="button" value="Login" [disabled]="form.invalid" (click)="add(userName.value, passWord.value);"
 						 class="btn float-right login_btn">
 					</div>
 				</form>

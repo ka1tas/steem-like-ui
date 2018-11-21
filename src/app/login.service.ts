@@ -15,7 +15,7 @@ const httpOptions = {
   providedIn: 'root'
 })
 export class LoginService {
-  url: string = "/";
+  url: string = "/steem/app/rest/authenticate";
 
   constructor( private http: HttpClient) { }
   

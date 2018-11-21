@@ -1,4 +1,4 @@
-var app = angular.module('searchModule', []);
+/* var app = angular.module('searchModule', []);
 
 // Defines the search controller by bringing the data into the scope.
 //
@@ -34,3 +34,4 @@ function search(arr, query) {
 
   return results;
 };
+ */

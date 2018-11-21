@@ -6,6 +6,7 @@ import { User } from '../user';
 import { LoginService } from '../login.service';
 import {AuthService} from './../auth.service';
 import { HttpClient } from '@angular/common/http';
+import { Login } from '../login';
 
 @Component({
   selector: 'app-login',
@@ -14,6 +15,8 @@ import { HttpClient } from '@angular/common/http';
 })
 export class LoginComponent implements OnInit {
 
+
+usergame:any;
 json:any;
 
   form = new FormGroup({
@@ -40,51 +43,59 @@ json:any;
 
   }
 
-user1:User={
-  id:1,
-  username:"kaitas",
-  password:12345
-}
-
-  add(userName, passWord){
+  add(userName: string, passWord: string){
     
-    if(userName==this.user1.username||passWord==this.user1.password){
 
-      console.log("checked true");
-            this.service.login();
-              
-            this.router.navigate(['/store']);
-            console.log("after login");
+    // The server will generate the id for this new login 
+    const newUser: Login = { userName, passWord } as Login;
 
+    let json = JSON.stringify({
+      userName: userName,
+      password: passWord
+    });
 
-    }
-
-    /* console.log( this.form.value);
-    this.json = this.form.value;
-    this.loginService.addUser(this.json)
+    this.loginService.addUser(json)
       .subscribe(data => 
+        {
+          this.usergame=data;
+          console.log(this.usergame);
+          console.log(userName);
+          console.log(this.usergame.user.userName);
+          console.log(this.usergame.game[0].name);
+          console.log(this.usergame.game[0]);
 
-      {if(data.authenticated){
+
+
+        
+
+        
+
+      if(this.usergame.user.userName==userName){
         console.log("checked true");
               this.service.login();
               console.log("this.service.isLoggedIn:"+this.service.isLoggedIn);
-            this.router.navigate(['/employee']);
+            this.router.navigate(['/store']);
             console.log("after navigate");
         }
         else{
           
           console.log("Wrong username or password");
-        this.router.navigate(['/reactivelogin']);
+        this.router.navigate(['/login']);
         return false;
-        }}
-
+        } 
+      }
       );
- */
+     
+
 
       
 
   } 
-}
+
+      
+
+  } 
+
 
 
 

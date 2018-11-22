@@ -4,7 +4,7 @@ import { UsernameValidators } from '../login/username.validators';
 import { Router } from '@angular/router';
 import { User } from '../user';
 import { LoginService } from '../login.service';
-import {AuthService} from './../auth.service';
+import { AuthService } from './../auth.service';
 import { HttpClient } from '@angular/common/http';
 import { Login } from '../login';
 
@@ -16,8 +16,8 @@ import { Login } from '../login';
 export class LoginComponent implements OnInit {
 
 
-usergame:any;
-json:any;
+  user: any;
+  json: any;
 
   form = new FormGroup({
     userName: new FormControl(
@@ -35,7 +35,7 @@ json:any;
   });
 
 
-
+  public errorMessage;
   constructor(private http: HttpClient, private router: Router, private loginService: LoginService,
     public service: AuthService) { }
 
@@ -43,8 +43,8 @@ json:any;
 
   }
 
-  add(userName: string, passWord: string){
-    
+  add(userName: string, passWord: string) {
+
 
     // The server will generate the id for this new login 
     const newUser: Login = { userName, passWord } as Login;
@@ -55,46 +55,41 @@ json:any;
     });
 
     this.loginService.addUser(json)
-      .subscribe(data => 
-        {
-          this.usergame=data;
-          console.log(this.usergame);
+      .subscribe(data => {
+        this.user = data;
+
+        console.log(userName);
+
+        if (this.user.userName != null) {
           console.log(userName);
-          console.log(this.usergame.user.userName);
-          console.log(this.usergame.game[0].name);
-          console.log(this.usergame.game[0]);
-
-
-
-        
-
-        
-
-      if(this.usergame.user.userName==userName){
-        console.log("checked true");
-              this.service.login();
-              console.log("this.service.isLoggedIn:"+this.service.isLoggedIn);
-            this.router.navigate(['/store']);
+          if (this.user.userName == userName) {
+            console.log("checked true");
+            this.service.login();
+            console.log("this.service.isLoggedIn:" + this.service.isLoggedIn);
+            this.router.navigate(['/store', this.user.id]);
             console.log("after navigate");
+          }
+
         }
-        else{
-          
+
+        else {
+
           console.log("Wrong username or password");
-        this.router.navigate(['/login']);
-        return false;
-        } 
-      }
+          alert("Wrong Username or Password!")
+          this.router.navigate(['/login']);
+          return false;
+        }
+      },
+        error => {
+          this.errorMessage = "System error or Contact Adminsitrator";
+        }
       );
-     
+
+  }
 
 
-      
 
-  } 
-
-      
-
-  } 
+}
 
 
 

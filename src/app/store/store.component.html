@@ -3,7 +3,10 @@
                 <source src="/assets/video/vid1.mp4"  type="video/mp4">
         </video> -->
         <div class="row">
-                <div class="col-lg-3"></div>
+                <div class="col-lg-3 col-sm-12 col-12">
+
+                        <h5 *ngIf="service.isLoggedIn" style="color: black; background-color: white">  Welcome: {{userdetails.firstName}} </h5>
+                </div>
                 <div class="col-lg-6">
                     <br> <br>
                         <ul class="navbar-nav search-games">
@@ -21,9 +24,9 @@
                               <br> <br>                             
                               
                 </div>
-                <div class="col-lg-3">
-                    
-                </div>
+                <div class="col-lg-3 col-sm-12 col-12">
+                 
+                 </div>
 
         </div>
 
@@ -71,22 +74,23 @@
                         <div class="col-sm-6 col-md-3 col-lg-3 col-12" *ngFor="let game of listOfGames| filterdata: queryString : 'name' ; let i = index"  >
                             <div class="panel panel-default panel-card panel-bg">
                                 <div class="panel-heading">
-                                    <img src="https://i.kinja-img.com/gawker-media/image/upload/s--9KiOXznr--/c_scale,f_auto,fl_progressive,q_80,w_800/hdn0qsabgs28tbu00tuf.jpg" />
+                                    <img src=""/>
                                     <button class="btn btn-primary btn-sm" role="button"><i class="fas fa-cart-plus"></i></button>
                                 </div>
 
                                 <div class="panel-body text-center" >
-                                    <h4 class="panel-header"><a routerLink="/games">{{game.name}}</a></h4>
-                                    <small>{{game.headLine}}</small>
+                                    <h4 class="panel-header"><a [routerLink]="['/games',game.id]">{{game.name}}</a></h4>
+                                    <small>{{game.about}}</small>
                                 </div>
                                 <div class="panel-thumbnails">
                                     <div class="row">
 
                                         <div class="col-xs-4">
-                                            {{game.description}}
+                                            {{game.description}}<br>
                                         </div>
+                                        
                                         <div class="col-xs-4">
-                                            <span class="badge badge-warning">&#x20B9; 0.00</span>
+                                            <span class="badge badge-warning">  &#x20B9; {{game.price}}</span>
                                         </div>
 
                                     </div>

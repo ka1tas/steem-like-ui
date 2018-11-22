@@ -8,7 +8,6 @@ import { inject } from '@angular/core/testing';
 import { HttpClient } from '@angular/common/http';
 import { StoreService } from '../store.service';
 
-
 @Component({
   selector: 'app-store',
   templateUrl: './store.component.html',
@@ -24,11 +23,16 @@ export class StoreComponent implements OnInit {
 
   constructor(private router: Router,  
     private route: ActivatedRoute, private fb: FormBuilder,private http: HttpClient,
-    private storeService: StoreService,public service: AuthService) { }
+    private storeService: StoreService,public service: AuthService,
+    ) { }
 
   ngOnInit() {
 
     this.id = this.route.snapshot.paramMap.get('id');
+    console.log("id in store: "+this.id);
+   
+   
+    
     this.storeService.getViewPlus(this.id).subscribe(
       data => {
         this.userandgames = data;

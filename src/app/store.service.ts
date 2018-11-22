@@ -16,6 +16,7 @@ const httpOptions = {
 export class StoreService {
   url1: string ;
   url2:string;
+  url3:string;
   constructor(private http: HttpClient) { }
 
 
@@ -33,6 +34,13 @@ export class StoreService {
     
     return this.http.get<any>(this.url2);
   }
+
+  getGamedetails(id:number) : Observable<any[]> {
+
+    this.url3= '/steem/app/rest/store/showgame?userId=';
+    console.log(id);
+    return this.http.get<any>(this.url3+id);
+  } 
 
 
 }

@@ -7,6 +7,7 @@ import { LoginService } from '../login.service';
 import { AuthService } from './../auth.service';
 import { HttpClient } from '@angular/common/http';
 import { Login } from '../login';
+import { TransfereService } from '../transfere.service';
 
 @Component({
   selector: 'app-login',
@@ -37,7 +38,7 @@ export class LoginComponent implements OnInit {
 
   public errorMessage;
   constructor(private http: HttpClient, private router: Router, private loginService: LoginService,
-    public service: AuthService) { }
+    public service: AuthService,private transfereService:TransfereService) { }
 
   ngOnInit() {
 
@@ -67,6 +68,7 @@ export class LoginComponent implements OnInit {
             this.service.login();
             console.log("this.service.isLoggedIn:" + this.service.isLoggedIn);
             this.router.navigate(['/store', this.user.id]);
+            this.transfereService.setData(this.user.id);
             console.log("after navigate");
           }
 

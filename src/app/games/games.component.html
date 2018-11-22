@@ -1,12 +1,12 @@
 <div class="container-fluid text-center" >    
   <div class="row content">
-    
+
     <div class="col-sm-12 col-lg-2 col-12 sidenav" style="padding-left:0px;padding-right:0px;"></div>
     
     <div class="col-sm-12 col-lg-8 col-12 text-left" style="padding-left:0px;padding-right:0px;">  
       <div class="row">
-            <div class="col-lg-11 col-12 col-sm-12"><h1>&nbsp;&nbsp;COUNTER STRIKE<span style="font-size:16px;">(by Ste@mTe@m)</span></h1> </div>
-            <div class="col-lg-1 col-12 col-sm-12"><h1><i class="far fa-plus-square" style="color:green;"></i></h1></div>
+            <div class="col-lg-11 col-12 col-sm-12"><h1>&nbsp;&nbsp; {{gamedetails.name}} <span style="font-size:16px;">(by Ste@mTe@m)</span></h1> </div>
+            <div class="col-lg-1 col-12 col-sm-12"><br><a class="btn btn-success" (click)="addgame();" ><i class="far fa-plus-square" ></i></a></div>
           
       </div>
       <div class="row">
@@ -19,12 +19,13 @@
           </div>
       </div>
       <div class="row" style="background-color: rgb(92, 5, 5);opacity: 0.9;color:white; margin:2px 0px 0px 0px; ">
-          <div class="col-lg-6 col-12 col-sm-12">Genre : Action,Sci-Fi,Strategy</div>
-          <div class="col-lg-6 col-12 col-sm-12">Rating : 8.7</div>
+          <div class="col-lg-6 col-12 col-sm-12">Genre : {{gamedetails.genre}}</div>
+          <div class="col-lg-6 col-12 col-sm-12">Rating : {{gamedetails.rating}}</div>
           <div class="col-lg-6 col-12 col-sm-12">Country : India</div>
-          <div class="col-lg-6 col-12 col-sm-12">Developer : Steeeeem</div>
+          <div class="col-lg-6 col-12 col-sm-12">Developer : {{gamedetails.developer}}</div>
           <div class="col-lg-6 col-12 col-sm-12">Requirements : Windows 10 64-bit,8gb gtx series</div>
-          <div class="col-lg-6 col-12 col-sm-12">Price : &#x20B9; 0.00</div>
+          <div class="col-lg-6 col-12 col-sm-12">Price : &#x20B9;{{gamedetails.price}}</div>
+          <div class="col-lg-6 col-12 col-sm-12">Description :{{gamedetails.description}}</div>
       </div>
         
     </div>

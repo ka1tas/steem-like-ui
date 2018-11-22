@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../auth.service';
 import { Router } from '@angular/router';
+import { TransfereService } from '../transfere.service';
 
 
 @Component({
@@ -9,11 +10,34 @@ import { Router } from '@angular/router';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-
-  constructor(public service: AuthService, private router: Router) { }
+  
+  data:any;
+  constructor(public service: AuthService, private router: Router,  private transfereService:TransfereService) { }
 
   ngOnInit() {
+  
   }
+
+
+  goStore(){
+    this.data=this.transfereService.getData(); 
+    console.log("HELLO Store");
+    this.router.navigate(['/store', this.data]);
+  };
+
+  goProfile(){
+    this.data=this.transfereService.getData(); 
+    console.log("HELLO Profile");
+    this.router.navigate(['/profile', this.data]);
+  };
+
+  goCommunity(){
+    this.data=this.transfereService.getData(); 
+    console.log("HELLO Community");
+    this.router.navigate(['/community', this.data]);
+  };
+
+
   logout(){
     this.service.logout();
     this.router.navigate(['/login']);

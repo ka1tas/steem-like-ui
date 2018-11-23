@@ -17,7 +17,7 @@ export class StoreComponent implements OnInit {
     {id:5,name:'STAR WARS™',headLine:'One Champion. No Limits.',description:'Climb on and experience the pure adrenaline-pumping excitement'},
     {id:6,name:'Call of Duty: MW',headLine:'Most critically-acclaimed games',description:'Remastered in true high-definition & improved textures'},
     {id:7,name:'Left 4 Dead 2',headLine:'Best action horror ',description:'Set in the zombie apocalypse'},
-    {id:8,name:"Assassin's Creed Unity",headLine:'Best action/adventure game ',description:'Set in the city of Paris , the French Revolution.'},
+    {id:8,name:"Assassin's Creed Unity",headLine:'Best action/adventure game ',description:'Set in the city of Paris,the French Revolution.'},
     
     ];
 

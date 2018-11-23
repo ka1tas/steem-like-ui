@@ -15,22 +15,18 @@
           </div>
        </div>
        <!-- /.col-lg-3 -->
-
-
-
        <div class="col-lg-7">
-          <div class="ui-block" *ngFor="let post of posts">
-           
+          <div class="ui-block">
              <article class="hentry post">
                 <div class="m-link">
                   
-                      <h4>{{post.title}}</h4>
+                      <h4>We are in Posts</h4>
                    
                 </div>
                 <div class="post__author author vcard inline-items">
                    <img src="https://a11.t26.net/taringa/avatares/9/1/2/F/7/8/Demon_King1/48x48_5C5.jpg" alt="author">
                    <div class="author-date">
-                      <span class="h6 post__author-name fn">Username:{{post.user.userName}} </span>
+                      <a class="h6 post__author-name fn" routerLink="/profile">{{user.name}} </a>
                       <div class="post__date">
                          <time class="published" datetime="2004-07-24T18:18">
                          Answered 2h ago
@@ -42,41 +38,22 @@
                 <p>{{post.content}}
                 </p>
 
-                <div class="post-additional-info inline-items"  *ngFor="let comment of post.commentList">
-                    
-                    <p>
-                        {{comment.content}}
-                    </p>
-                  
-                    <div class="post__date" style="color:grey">
-                        
-                            commented by: {{comment.user.userName}}
-                     
-                     </div>
-                   
+                <div class="post-additional-info inline-items">
+                  <!--  <form class="commentform">
+                     <input type="text" placeholder="leave a Comment" class="form-control commentkoro" [(ngModel)]=comment.content> 
+                     <br>  -->
+                  <span class="fa fa-pen"></span><input type="submit" class="btn btn-sm btn-success"value="Show Post">
+               
                   
                 </div>
-
-                <div class="post-additional-info inline-items">
-                 <form class="commentform">
-                    <input type="text" placeholder="leave a Comment"  #content class="form-control commentkoro"> 
-                    <input type="hidden"  class="form-control commentkoro" #userId value="{{post.id}}" >
-                      <input type="hidden"  class="form-control commentkoro"  #postId value="{{post.user.id}}" > 
-                    <br>  
-                    <button type="submit" class="btn btn-success" (click)="addcomment(content.value , userId.value , postId.value );">Comment</button>
-
-                    </form>
-                      <!--  <a  class="btn btn-sm btn-success" [routerLink]="['/post',post.id]"> <span class="fa fa-pen"> Show post </span></a> -->
-                  </div>
-
              </article>
-             
           </div>
         
        </div>
-   
+       <!-- /.col-lg-6 -->
+       <!--col-lg-3-->
        <div class="col-lg-3">
-          <div class=" q-wid">
+         <!--  <div class=" q-wid">
              <div class="ui-block">
                 <h6 class="my-4">Improve Your Feed</h6>
                 <hr>
@@ -87,10 +64,11 @@
                    <a class="nav-link" data-toggle="pill" href="#">Answer a question</a>
                 </div>
              </div>
-          </div>
+          </div> -->
        </div>
-       
+       <!-- /.col-lg-3 -->
     </div>
  </div>
+ <!-- /.container -->
  
  

@@ -37,10 +37,10 @@ export class StoreService {
 
   getGamedetails(id:number) : Observable<any[]> {
 
-    this.url3= '/steem/app/rest/store/showgame?userId=';
+    this.url3= '/steem/app/rest/store/showgame?gameId=';
     console.log(id);
     return this.http.get<any>(this.url3+id);
   } 
 
-
+  
 }

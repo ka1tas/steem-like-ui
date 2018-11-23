@@ -22,10 +22,13 @@ export class TransfereService {
   }
 
   getData(){
-    console.log(this.data);
-    return this.data;
+  
+
+    return  this.data;
   }
 
-  
+  clearData(){
+    this.data = undefined;
+  }
 
 }

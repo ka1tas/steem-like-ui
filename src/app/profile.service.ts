@@ -19,6 +19,7 @@ export class ProfileService {
     this.url1= '/steem/app/rest/profile/showProfile?userId=';
     console.log(id);
     return this.http.get<any>(this.url1+id);
+    
   } 
 
 

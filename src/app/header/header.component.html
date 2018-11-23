@@ -65,6 +65,7 @@
     <ul class="navbar-nav ml-auto ">
         <li ><a class="nav-item btn btn-dark col-12" *ngIf="!service.isLoggedIn"  routerLink="/login"><i class="fas fa-sign-in-alt"></i>Login</a></li>
         <li><a  class="nav-item btn btn-dark col-12" *ngIf="!service.isLoggedIn" routerLink="/signup"><i class="fas fa-user-plus"></i>SignUp</a></li>
+        <li><a  class="nav-item btn btn-info col-12" *ngIf="service.isLoggedIn" (click)="goProfile();"><i class="fas fa-user"></i>{{data.userName}}</a></li>
         <li><a  class="nav-item btn btn-light col-12" *ngIf="service.isLoggedIn" (click)="logout()"><i class="fas fa-sign-out-alt"></i>Logout</a></li>
 
     </ul> 

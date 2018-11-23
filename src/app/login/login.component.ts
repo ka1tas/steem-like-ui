@@ -68,7 +68,7 @@ export class LoginComponent implements OnInit {
             this.service.login();
             console.log("this.service.isLoggedIn:" + this.service.isLoggedIn);
             this.router.navigate(['/store', this.user.id]);
-            this.transfereService.setData(this.user.id);
+            this.transfereService.setData(this.user);
             console.log("after navigate");
           }
 

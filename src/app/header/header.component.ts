@@ -22,25 +22,28 @@ export class HeaderComponent implements OnInit {
   goStore(){
     this.data=this.transfereService.getData(); 
     console.log("HELLO Store");
-    this.router.navigate(['/store', this.data]);
+    this.router.navigate(['/store', this.data.id]);
   };
 
   goProfile(){
     this.data=this.transfereService.getData(); 
     console.log("HELLO Profile");
-    this.router.navigate(['/profile', this.data]);
+    this.router.navigate(['/profile', this.data.id]);
   };
 
   goCommunity(){
     this.data=this.transfereService.getData(); 
     console.log("HELLO Community");
-    this.router.navigate(['/community', this.data]);
+    this.router.navigate(['/community', this.data.id]);
   };
 
 
   logout(){
     this.service.logout();
     this.router.navigate(['/login']);
+  this.data=""; 
+
+
   }
 
  

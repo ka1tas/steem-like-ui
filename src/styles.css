@@ -7,7 +7,7 @@
 @import url('https://fonts.googleapis.com/css?family=Numans');
 
 body{
-    background: linear-gradient(132deg, #3c6977, rgb(15, 184, 175), #9C27B0, #673AB7, #3F51B5, #2196F3,#03A9F4, #00BCD4, #009688, #4CAF50, #FFC107, #FF9800, #f44336, #E91E63, #9C27B0, #673AB7, #3F51B5, #2196F3,#03A9F4, #00BCD4, #009688, #4CAF50, #FFC107, #FF9800);
+    background: linear-gradient(132deg, #124150, rgb(171, 197, 196), rgb(122, 110, 124), rgb(31, 30, 32), rgb(151, 161, 219), rgb(80, 98, 112),rgb(102, 139, 156), #00BCD4, #3a2c75, #4CAF50, rgb(62, 99, 58), #FF9800, #8d7371, rgb(145, 76, 99), rgb(94, 32, 105), #673AB7, #3F51B5, #2196F3,#03A9F4, #00BCD4, #009688, #4CAF50, rgb(121, 107, 65), rgb(143, 96, 27));
     background-size: 400% 400%;
     animation: BackgroundGradient 30s ease infinite;
 

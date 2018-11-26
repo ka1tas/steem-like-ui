@@ -16,7 +16,7 @@ export class ProfileService {
 
   getViewProfile(id:number) : Observable<any[]> {
 
-    this.url1= '/steem/app/rest/profile/showProfile?userId=';
+    this.url1= '/steem/rest/profile/showProfile?userId=';
     console.log(id);
     return this.http.get<any>(this.url1+id);
     

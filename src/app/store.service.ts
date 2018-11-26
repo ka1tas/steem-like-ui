@@ -23,21 +23,21 @@ export class StoreService {
 
   getViewPlus(id:number) : Observable<any[]> {
 
-    this.url1= '/steem/app/rest/store/showplus?userId=';
+    this.url1= '/steem/rest/store/showplus?userId=';
     console.log(id);
     return this.http.get<any>(this.url1+id);
   } 
 
   getView() : Observable<any[]> {
 
-    this.url2= '/steem/app/rest/store/show';
+    this.url2= '/steem/rest/store/show';
     
     return this.http.get<any>(this.url2);
   }
 
   getGamedetails(id:number) : Observable<any[]> {
 
-    this.url3= '/steem/app/rest/store/showgame?gameId=';
+    this.url3= '/steem/rest/store/showgame?gameId=';
     console.log(id);
     return this.http.get<any>(this.url3+id);
   } 

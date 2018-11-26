@@ -15,10 +15,10 @@ const httpOptions= {
 export class CommunityService {
 
 
-  url: string ="/rest/post/postlist";
-  url1 : string ="/rest/comment/commentlist";
-  url2: string ="/rest/user/list";
-  url3: string ="/rest/comment/addcomment";
+  url: string ="/steem/rest/post/postlist";
+  url1 : string ="/steem/rest/comment/commentlist";
+  url2: string ="/steem/rest/user/list";
+  url3: string ="/steem/rest/comment/addcomment";
 
   constructor(private http: HttpClient) { }
 

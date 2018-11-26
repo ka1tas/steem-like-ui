@@ -62,14 +62,10 @@
                  <form class="commentform">
                  
                   <input type="text" placeholder="leave a Comment"  #content class="form-control commentkoro"> 
-
-      
-
-
-                    <input type="hidden"  class="form-control commentkoro" #userId value="{{post.id}}" >
-                      <input type="hidden"  class="form-control commentkoro"  #postId value="{{post.user.id}}" > 
+                    <input type="hidden"  class="form-control commentkoro" #userId value="{{userid}}" >
+                  <input type="hidden"  class="form-control commentkoro"  #postId value="{{post.id}}" > 
                     <br>  
-                    <button type="submit" class="btn btn-success" (click)="addcomment(content.value , userId.value , postId.value );">Comment</button>
+                    <button type="submit" class="btn btn-success" (click)="addcomment(content.value , postId.value, userId.value );">Comment</button>
 
                     </form>
                       <!--  <a  class="btn btn-sm btn-success" [routerLink]="['/post',post.id]"> <span class="fa fa-pen"> Show post </span></a> -->

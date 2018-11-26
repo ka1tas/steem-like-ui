@@ -48,7 +48,7 @@ export class CommunityComponent implements OnInit {
 
 
     console.log(commentss);
-    console.log(userId);
+    console.log("user id: "+ userId);
     console.log("post id: "+ postId);
 
     if(commentss==""){
@@ -75,7 +75,7 @@ export class CommunityComponent implements OnInit {
       if(data.user!=null){
         console.log(data);
       this.router.navigateByUrl('/store', {skipLocationChange: true}).then(()=>
-this.router.navigate(["/community"])); 
+this.router.navigate(["/community",  this.userid])); 
 
       }
     }

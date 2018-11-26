@@ -47,8 +47,8 @@ export class PostComponent implements OnInit {
      
       if(data.user!=null){
         console.log(data);
-
-      this.router.navigate(["/community"]); 
+     
+      this.router.navigate(["/community", this.userid]); 
 
       }
     }

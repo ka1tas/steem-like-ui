@@ -43,7 +43,7 @@ export class CommunityComponent implements OnInit {
 
     console.log(commentss);
     console.log(userId);
-    console.log(postId);
+    console.log("post id: "+ postId);
     
     let json =JSON.stringify({
       id:0,
@@ -54,6 +54,7 @@ export class CommunityComponent implements OnInit {
       post:{
         id:postId
       },
+      postid : postId
       
     });
 

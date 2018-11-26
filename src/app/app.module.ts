@@ -19,6 +19,7 @@ import { AuthService } from './auth.service';
 import { AuthGuard } from './auth.guard';
 import { HttpClientModule } from '@angular/common/http';
 import { FilterdataPipe } from './filterdata.pipe';
+import { PostComponent } from './post/post.component';
 
 
 @NgModule({
@@ -36,7 +37,8 @@ import { FilterdataPipe } from './filterdata.pipe';
     SearchuserComponent,
     GamelistComponent,
     FriendlistComponent,
-    FilterdataPipe
+    FilterdataPipe,
+    PostComponent
   ],
   imports: [
     BrowserModule,

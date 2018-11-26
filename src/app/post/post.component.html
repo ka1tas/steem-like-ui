@@ -1,0 +1,74 @@
+<div class="container-fluid">
+    <div class="row">
+       <div class="col-lg-2">
+          <div class=" aff-right">
+             <div class="ui-block">
+                <h6 class="my-4">Feeds</h6>
+                <hr>
+                <div class="nav flex-column nav-pills nav-stacked" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                   <a class="nav-link active" data-toggle="pill" href="#"> Top Stories</a>
+                   <a class="nav-link" data-toggle="pill" href="#" >New Questions</a>
+                   <a class="nav-link" data-toggle="pill" href="#">Links</a>
+                  
+                </div>
+             </div>
+          </div>
+       </div>
+       <!-- /.col-lg-3 -->
+       <div class="col-lg-7">
+          <div class="ui-block">
+             <article class="hentry post">
+                <div class="m-link">
+                  
+                      <h4>We are in Posts</h4>
+                   
+                </div>
+                <div class="post__author author vcard inline-items">
+                   <img src="https://a11.t26.net/taringa/avatares/9/1/2/F/7/8/Demon_King1/48x48_5C5.jpg" alt="author">
+                   <div class="author-date">
+                      <a class="h6 post__author-name fn" routerLink="/profile">{{user.name}} </a>
+                      <div class="post__date">
+                         <time class="published" datetime="2004-07-24T18:18">
+                         Answered 2h ago
+                         </time>
+                      </div>
+                   </div>
+                   
+                </div>
+                <p>{{post.content}}
+                </p>
+
+                <div class="post-additional-info inline-items">
+                  <!--  <form class="commentform">
+                     <input type="text" placeholder="leave a Comment" class="form-control commentkoro" [(ngModel)]=comment.content> 
+                     <br>  -->
+                  <span class="fa fa-pen"></span><input type="submit" class="btn btn-sm btn-success"value="Show Post">
+               
+                  
+                </div>
+             </article>
+          </div>
+        
+       </div>
+       <!-- /.col-lg-6 -->
+       <!--col-lg-3-->
+       <div class="col-lg-3">
+          <div class=" q-wid">
+             <div class="ui-block">
+                <h6 class="my-4">Improve Your Feed</h6>
+                <hr>
+                <div class="nav flex-column nav-pills nav-stacked" id="v-pills-tab"  aria-orientation="vertical">
+               
+                   <a class="nav-link"  data-toggle="pill" href="#"  >Ask your first question</a>
+                   <a class="nav-link" data-toggle="pill" routerLink="/store"   >Find New Games</a>
+                   <a class="nav-link" data-toggle="pill" href="#">Answer a question</a>
+                </div>
+             </div>
+          </div>
+       </div>
+       <!-- /.col-lg-3 -->
+    </div>
+ </div>
+ <!-- /.container -->
+ 
+ 

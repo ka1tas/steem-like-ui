@@ -16,47 +16,71 @@
           </div>
        </div>
        <!-- /.col-lg-3 -->
+
+
+
        <div class="col-lg-7">
-          <div class="ui-block">
+          <div class="ui-block" *ngFor="let post of posts">
+           
              <article class="hentry post">
                 <div class="m-link">
                   
-                      <h4>How to be a pro MLG sniper in TF2?</h4>
+                      <h4>{{post.title}}</h4>
                    
                 </div>
                 <div class="post__author author vcard inline-items">
                    <img src="https://a11.t26.net/taringa/avatares/9/1/2/F/7/8/Demon_King1/48x48_5C5.jpg" alt="author">
                    <div class="author-date">
-                      <a class="h6 post__author-name fn" routerLink="/profile">Kaitas </a>
+                      <span class="h6 post__author-name fn">Username:{{post.user.userName}} </span>
                       <div class="post__date">
                          <time class="published" datetime="2004-07-24T18:18">
                          Answered 2h ago
                          </time>
                       </div>
                    </div>
-                   <div class="more">
-                      <a href="#">
-                      <i class="fa fa-edit"></i>
-                      </a>
-                   </div>
+                   
                 </div>
-                <p>Sniper is kind of hard, at the first time you play this game, but dont worry you can be a hacker by following this Idiot, With bad english, guide.
-                    Sniper takes so much skill in general, if you have high sensitivity mouse setting, i reccomend you to use low sensetivity. Because it will help you track down their heads.
+                <p>{{post.content}}
                 </p>
 
-                <div class="post-additional-info inline-items">
-                   <form class="commentform"> 
-                     <br> 
-                  <span class="fa fa-pen"></span><input type="submit" class="btn btn-sm btn-success"value="Show">
-               </form>
+                <div class="post-additional-info inline-items"  *ngFor="let comment of post.commentList">
+                    
+                    <p>
+                        {{comment.content}}
+                    </p>
+                  
+                    <div class="post__date" style="color:grey">
+                        
+                            commented by: {{comment.user.userName}}
+                     
+                     </div>
+                   
                   
                 </div>
+
+                <div class="post-additional-info inline-items">
+                 <form class="commentform">
+                 
+                  <input type="text" placeholder="leave a Comment"  #content class="form-control commentkoro"> 
+
+      
+
+
+                    <input type="hidden"  class="form-control commentkoro" #userId value="{{post.id}}" >
+                      <input type="hidden"  class="form-control commentkoro"  #postId value="{{post.user.id}}" > 
+                    <br>  
+                    <button type="submit" class="btn btn-success" (click)="addcomment(content.value , userId.value , postId.value );">Comment</button>
+
+                    </form>
+                      <!--  <a  class="btn btn-sm btn-success" [routerLink]="['/post',post.id]"> <span class="fa fa-pen"> Show post </span></a> -->
+                  </div>
+
              </article>
+             
           </div>
         
        </div>
-       <!-- /.col-lg-6 -->
-       <!--col-lg-3-->
+   
        <div class="col-lg-3">
           <div class=" q-wid">
              <div class="ui-block">
@@ -71,38 +95,8 @@
              </div>
           </div>
        </div>
-       <!-- /.col-lg-3 -->
+       
     </div>
  </div>
- <!-- /.container -->
- <!-- The Modal -->
- <div class="modal fade" id="addModal">
-    <div class="modal-dialog">
-       <div class="modal-content">
-          <!-- Modal Header -->
-          <div class="modal-header">
-             <button type="button" class="close" data-dismiss="modal">×</button>
-          </div>
-          <!-- Modal body -->
-          <div class="modal-body">
-            
-             <div class="post__author author vcard inline-items">
-                <img src="https://a11.t26.net/taringa/avatares/9/1/2/F/7/8/Demon_King1/48x48_5C5.jpg" alt="author">
-                <div class="author-date">
-                   <a class="h6 post__author-name fn" href="#">Dipendra Singh</a>
-                   <div class="post__date">
-                      <time class="published" datetime="2004-07-24T18:18">
-                      Answered 2h ago
-                      </time>
-                   </div>
-                </div>
-             </div>
-          </div>
-          <!-- Modal footer -->
-          <div class="modal-footer">
-             <button type="button" class="btn btn-danger">Add Question</button>
-             <button type="button" class="btn btn-warning" data-dismiss="modal">Cancel</button>
-          </div>
-       </div>
-    </div>
- </div>
+ 
+ 

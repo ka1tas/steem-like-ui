@@ -11,6 +11,7 @@ import { EdituserComponent } from './edituser/edituser.component';
 import { SearchuserComponent } from './searchuser/searchuser.component';
 import { FriendlistComponent } from './friendlist/friendlist.component';
 import { GamelistComponent } from './gamelist/gamelist.component';
+import { PostComponent } from './post/post.component';
 
 const routes: Routes = [
   {path:"", component:StoreComponent},
@@ -27,7 +28,9 @@ const routes: Routes = [
   {path:"editprofile", canActivate: [AuthGuard], component:EdituserComponent },
   {path:"finduser", component:SearchuserComponent},
   {path:"friendlist",canActivate: [AuthGuard], component:FriendlistComponent},
-  {path:"gamelist", canActivate: [AuthGuard], component:GamelistComponent}
+  {path:"gamelist", canActivate: [AuthGuard], component:GamelistComponent},
+  {path:"post", canActivate: [AuthGuard], component: PostComponent},
+  {path: "post/:id", canActivate: [AuthGuard],  component: PostComponent }
 
 ];
 

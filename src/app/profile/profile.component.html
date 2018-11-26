@@ -71,16 +71,16 @@
            <a class="btn" routerLink="/gamelist" >Games</a>
           </li>
           <li>
-              <a class="btn" routerLink="/friendlist" >Friends</a>
+              <a class="btn" [routerLink]="['/friendlist', user.id]" >Friends</a>
              </li>
              <li>
                 <a class="btn " routerLink="/finduser" >Find Friends</a>
                </li>
                <li>
-                  <a class="btn" routerLink="/community" >Community</a>
+                  <a class="btn"  [routerLink]="['/community', user.id]" >Community</a>
                  </li>
                  <li>
-                    <a class="btn" routerLink="/store" >Store</a>
+                    <a class="btn" [routerLink]="['/store', user.id]">Store</a>
                    </li>
 
 

@@ -20,30 +20,23 @@
              <article class="hentry post">
                 <div class="m-link">
                   
-                      <h4>We are in Posts</h4>
+                      <h4>Create A Post</h4>
                    
                 </div>
                 <div class="post__author author vcard inline-items">
-                   <img src="https://a11.t26.net/taringa/avatares/9/1/2/F/7/8/Demon_King1/48x48_5C5.jpg" alt="author">
+                   <img src="/assets/propic/{{userid}}.jpg" >
                    <div class="author-date">
-                      <a class="h6 post__author-name fn" routerLink="/profile">{{user.name}} </a>
-                      <div class="post__date">
-                         <time class="published" datetime="2004-07-24T18:18">
-                         Answered 2h ago
-                         </time>
-                      </div>
+                     
                    </div>
                    
                 </div>
-                <p>{{post.content}}
-                </p>
-
                 <div class="post-additional-info inline-items">
-                  <!--  <form class="commentform">
-                     <input type="text" placeholder="leave a Comment" class="form-control commentkoro" [(ngModel)]=comment.content> 
-                     <br>  -->
-                  <span class="fa fa-pen"></span><input type="submit" class="btn btn-sm btn-success"value="Show Post">
-               
+                  <form class="postform">
+                   <input type="text" placeholder="create a title"  #title class="form-control "> 
+                  <input type="text" placeholder="create a post"  #content class="form-control postit"> 
+                  <input type="hidden"  class="form-control commentkoro" #userId value="{{userid}}" >
+                  <button type="submit" class="btn btn-success" (click)="addPost(title.value,content.value , userId.value  );">Post</button>
+               </form>
                   
                 </div>
              </article>

@@ -16,7 +16,6 @@ import { PostComponent } from './post/post.component';
 const routes: Routes = [
   {path:"", component:StoreComponent},
   {path:"login", component:LoginComponent},
-  {path:"community",canActivate: [AuthGuard], component:CommunityComponent},
   {path: "community/:id", canActivate: [AuthGuard], component: CommunityComponent },
   {path:"store", component:StoreComponent},
   {path: "store/:id", canActivate: [AuthGuard], component: StoreComponent },

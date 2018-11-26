@@ -164,11 +164,12 @@
         }
         }
     
-        .commentform{
+        .postform{
     
             width: 100%;
         }
-        .commentkoro{
+        .postit{
     
-            height: 60px;
+            height: 120px;
+            width: 100%;
         }

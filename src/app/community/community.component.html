@@ -34,7 +34,7 @@
                       <span class="h6 post__author-name fn">Username:{{post.user.userName}} </span>
                       <div class="post__date">
                          <time class="published" datetime="2004-07-24T18:18">
-                         Answered 2h ago
+                         Posted 2h ago
                          </time>
                       </div>
                    </div>
@@ -88,7 +88,7 @@
                 <hr>
                 <div class="nav flex-column nav-pills nav-stacked" id="v-pills-tab"  aria-orientation="vertical">
                
-                   <a class="nav-link"  data-toggle="pill" routerLink="/community"  >Ask your first question</a>
+                   <a class="nav-link"  data-toggle="pill" [routerLink]="['/post', userid]" >Create a Post</a>
                    <a class="nav-link" data-toggle="pill" routerLink="/store"   >Find New Games</a>
                    <a class="nav-link" style="cursor:pointer">Answer a question</a>
                 </div>

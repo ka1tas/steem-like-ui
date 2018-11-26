@@ -7,9 +7,12 @@
 @import url('https://fonts.googleapis.com/css?family=Numans');
 
 body{
-    background: linear-gradient(132deg, rgb(122, 233, 229), rgb(188, 117, 201), rgb(94, 60, 60), rgb(83, 107, 243),rgb(253, 100, 100),rgb(102, 139, 156), #00BCD4, #3a2c75, #4CAF50, rgb(62, 99, 58), #FF9800, #8d7371, rgb(145, 76, 99), rgb(94, 32, 105), #673AB7, #3F51B5, #2196F3,#03A9F4, #00BCD4, #009688, #009688);
+   /*  background: linear-gradient(132deg, rgb(122, 233, 229), rgb(188, 117, 201), rgb(94, 60, 60), rgb(83, 107, 243),rgb(253, 100, 100),rgb(102, 139, 156), #00BCD4, #3a2c75, #4CAF50, rgb(62, 99, 58), #FF9800, #8d7371, rgb(145, 76, 99), rgb(94, 32, 105), #673AB7, #3F51B5, #2196F3,#03A9F4, #00BCD4, #009688, #009688);
     background-size: 400% 400%;
     animation: BackgroundGradient 30s ease infinite;
+ */
 
+ background-image: url("https://pixelz.cc/wp-content/uploads/2017/11/counter-strike-global-offensive-uhd-4k-wallpaper.jpg");
+ background-size: cover;
 }
 

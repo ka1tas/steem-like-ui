@@ -19,7 +19,7 @@ export class CommunityService {
   url1 : string ="/steem/rest/comment/commentlist";
   url2: string ="/steem/rest/user/list";
   url3: string ="/steem/rest/comment/addcomment";
-
+  url4: string ="/steem/rest/post/addpost";
   constructor(private http: HttpClient) { }
 
   getPosts() : Observable<any[]> {
@@ -31,6 +31,12 @@ export class CommunityService {
     return this.http.post<any>(this.url3, json, httpOptions);
   
 }
+
+addPost(json): Observable<any> {
+  return this.http.post<any>(this.url4, json, httpOptions);
+
+}
+
 
   errorHandler(error: HttpErrorResponse){
     return Observable.throw(error.message);

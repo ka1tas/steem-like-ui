@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CommunityService } from '../community.service';
 import { FormControl, FormBuilder } from '@angular/forms';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-community',
@@ -14,10 +14,11 @@ export class CommunityComponent implements OnInit {
   comment:any[];
   id : number;
   public errorMessage;
- 
+  userid:any;
   
 
-  constructor(private communityService: CommunityService,private fb: FormBuilder, private router: Router) { }
+  constructor(private communityService: CommunityService,private fb: FormBuilder, private router: Router
+    , private route: ActivatedRoute) { }
 
   ngOnInit() {
     console.log("Inside employee-component-ts");
@@ -36,6 +37,10 @@ export class CommunityComponent implements OnInit {
         this.errorMessage="System error. Contact Admin or try after some time";
       }
     );
+
+    this.userid = this.route.snapshot.paramMap.get('id');
+
+
   }
 
 

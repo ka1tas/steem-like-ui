@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CommunityService } from '../community.service';
 import { FormControl, FormBuilder } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-community',
@@ -16,7 +17,7 @@ export class CommunityComponent implements OnInit {
  
   
 
-  constructor(private communityService: CommunityService,private fb: FormBuilder) { }
+  constructor(private communityService: CommunityService,private fb: FormBuilder, private router: Router) { }
 
   ngOnInit() {
     console.log("Inside employee-component-ts");
@@ -44,7 +45,12 @@ export class CommunityComponent implements OnInit {
     console.log(commentss);
     console.log(userId);
     console.log("post id: "+ postId);
-    
+
+    if(commentss==""){
+      alert("Please Enter a comment!");
+
+    }
+    else{
     let json =JSON.stringify({
       id:0,
       content:commentss,
@@ -60,10 +66,18 @@ export class CommunityComponent implements OnInit {
 
     this.communityService.addComment(json)
     .subscribe(data => {
-      console.log(data);
-    }
-  );
+     
+      if(data.user!=null){
+        console.log(data);
+      this.router.navigateByUrl('/store', {skipLocationChange: true}).then(()=>
+this.router.navigate(["/community"])); 
 
+      }
+    }
+
+  
+  );
+    }
 
 
   }

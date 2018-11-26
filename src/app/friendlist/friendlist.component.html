@@ -38,7 +38,7 @@
         <br>
       <ul *ngFor="let user of friends| filterdata: queryString : 'username' ; let i = index ">
         <li>
-           <a routerLink="/profile" class="btn btn-dark">
+           <a  class="btn btn-dark">
         {{user.username}} 
       </a>
       <span class="btn btn-danger"><i class="fas fa-user-times"></i>Unfriend</span>
